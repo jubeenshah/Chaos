@@ -20,7 +20,9 @@ We will need to build the Dockerfile to setup up the environment with our chaos 
    ```
 3. Start a new container and run the cat facts server.
 
-   docker run --cap-add=NET_ADMIN -p 3000:3000 --name cats -d chaos-workshop node main.js
+   ```shell
+   docker run -v /Chaos/chaos:/chaos --cap-add=NET_ADMIN -p 3000:3000 --name cats -d chaos-workshop node main.js
+   ```
 
 ### Tools of Chaos
 
