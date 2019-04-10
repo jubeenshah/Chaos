@@ -11,7 +11,13 @@ This workshop will be a bit more exploratory than some of our other workshops, s
 We will need to build the Dockerfile to setup up the environment with our chaos tools and scripts.
 
 1. Build the Dockerfile and tag it chaos-workshop.
+   ```shell 
+   sudo docker build --tag=chaos-workshop .
+   ```
 2. Run a container and explore the contents.
+   ```shell 
+   sudo docker run -i -t <image-id> /bin/bash
+   ```
 3. Start a new container and run the cat facts server.
 
    docker run --cap-add=NET_ADMIN -p 3000:3000 --name cats -d chaos-workshop node main.js
